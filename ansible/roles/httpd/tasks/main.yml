@@ -7,13 +7,13 @@
 
 - name: Copy ssh private keys
   copy:
-    src: ./ssh/id_rsa
+    src: ~/.ssh/id_rsa
     dest: ~/.ssh/id_rsa
     mode: '0600'
 
 - name: Copy ssh public keys
   copy:
-    src: ./ssh/id_rsa.pub
+    src: ~/.ssh/id_rsa.pub
     dest: ~/.ssh/id_rsa.pub
     mode: '0600'
 

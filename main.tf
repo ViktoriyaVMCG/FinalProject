@@ -37,6 +37,11 @@ resource "local_file" "public_sshkeys" {
   file_permission = "0600"
 }
 
+#AWS_EIP
+resource "aws_eip" "jump"{
+   instance = aws_instance.jump.id
+   vpc = true
+}
 
 # SECURITY GROUPS
 
@@ -146,7 +151,7 @@ resource "aws_instance" "jump" {
    host        = self.public_ip
    type        = "ssh"
    user        = var.user
-#   private_key = tls_private_key.key_pair.private_key_pem
+   private_key = file("~/.ssh/id_rsa")
   }
  
    provisioner "file" {
@@ -169,7 +174,7 @@ resource "aws_instance" "jenkins" {
   instance_type = "t2.small"
   availability_zone = "us-east-1c"
   key_name = aws_key_pair.generated_key.key_name
-  security_groups = [aws_security_group.employee_sg.name, aws_security_group.customer_sg.name]
+  security_groups = [aws_security_group.employee_sg.name]
 
   tags = {
     Name = "jenkins"
@@ -181,7 +186,7 @@ resource "aws_instance" "dev" {
   instance_type = "t2.micro"
   availability_zone = "us-east-1c"
   key_name = aws_key_pair.generated_key.key_name
-  security_groups = [aws_security_group.employee_sg.name, aws_security_group.customer_sg.name]
+  security_groups = [aws_security_group.employee_sg.name]
 
   tags = {
     Name = "dev"
@@ -193,7 +198,7 @@ resource "aws_instance" "prod" {
   instance_type = "t2.micro"
   availability_zone = "us-east-1c"
   key_name = aws_key_pair.generated_key.key_name
-  security_groups = [aws_security_group.employee_sg.name, aws_security_group.customer_sg.name]
+  security_groups = [aws_security_group.employee_sg.name]
 
   tags = {
     Name = "prod"
@@ -251,14 +256,14 @@ ${aws_instance.dev.private_ip}
 ${aws_instance.prod.private_ip}
 
 EOF
-    filename = "./inventory"
+    filename = "inventory"
 }
 
 
  resource "null_resource" "deploy_ansible" {
-# depends_on = [aws_instance.jump, aws_instance.jenkins, aws_instance.dev, aws_instance.prod] 
+#depends_on = [aws_instance.jump, aws_instance.jenkins, aws_instance.dev, aws_instance.prod] 
 
-  provisioner"local-exec" {
+  provisioner "local-exec" {
     command =  "ansible-playbook -i inventory playbook.yml"
   }
 }

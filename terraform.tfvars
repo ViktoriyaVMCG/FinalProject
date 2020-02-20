@@ -1,0 +1,6 @@
+region = "us-east-1"
+profile = "default"
+access = "0.0.0.0/0"
+user = "ec2-user"
+owner = "viktoriya"
+ami = "ami-08fe38a2865705db8"

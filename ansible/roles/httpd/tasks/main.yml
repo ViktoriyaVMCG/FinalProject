@@ -1,0 +1,30 @@
+---
+- name: install updates
+  yum:
+    name: "*"
+    state: latest
+    use_backend: yum
+
+- name: Copy ssh private keys
+  copy:
+    src: ./ssh/id_rsa
+    dest: ~/.ssh/id_rsa
+    mode: '0600'
+
+- name: Copy ssh public keys
+  copy:
+    src: ./ssh/id_rsa.pub
+    dest: ~/.ssh/id_rsa.pub
+    mode: '0600'
+
+- name: Install apache packages 
+  yum:
+    name: httpd
+    state: present
+
+- name: ensure httpd is running
+  service:
+    name: httpd 
+    state: started
+
+

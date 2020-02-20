@@ -1,0 +1,21 @@
+--- 
+- 
+   become: true
+   gather_facts: false
+   hosts: devops  
+   name: "Configure Apache Server"
+   roles: 
+       - httpd
+-   
+   name: "Configure Jenkins VM"
+   hosts: jenkins
+   become: true
+   roles: 
+       - java
+       - jenkins
+- 
+   name: "Configure Jump Box"
+   hosts: jump
+   become: true
+   roles: 
+        - jump

@@ -1,0 +1,10 @@
+---
+- name: install updates
+  yum:
+    name: "*"
+    state: latest
+
+- name: install epel-release
+  yum:
+    name: epel-release
+    state: latest

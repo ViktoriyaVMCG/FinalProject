@@ -35,5 +35,5 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  ### Create an API key 
  We need to create an API key with in AWS to use in the Terraform.
  ### Create in your local machine a folder where you will keep the files.
- `$mkdir FinalProject `
+ `mkdir FinalProject `
  ## Terraform

@@ -17,15 +17,15 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
 6. Update and Upgrade the system
 
  * _Ubuntu_
-   * `<sudo apt-get update>`
-   * sudo apt-get upgrade
+   * `sudo apt-get update`
+   * `sudo apt-get upgrade`
   
  * _CentOS_
-   * sudo yum update
-   * sudo yum upgrade
+   * `sudo yum update`
+   * `sudo yum upgrade`
  ### Create an ssh key
- _ssh-keygen_
- After creating it, two keys should appear in the ~/.ssh directory
+ `ssh-keygen`
+ After creating it, two keys should appear in the `~/.ssh` directory
   * *private_key*
   * *public_key.pub*
  ## Installing Terraform

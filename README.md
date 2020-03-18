@@ -23,6 +23,8 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  * _CentOS_
    * `sudo yum update`
    * `sudo yum upgrade`
+ ## Preparation
+ 
  ### Create an ssh key
  `ssh-keygen`
  After creating it, two keys should appear in the `~/.ssh` directory
@@ -31,5 +33,7 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  ### Create an AWS account
  https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
  ### Create an API key 
- We need to create an API key with in AWS to use in the Terraform. 
+ We need to create an API key with in AWS to use in the Terraform.
+ ### Create in your local machine a folder where you will keep the files.
+ `$mkdir FinalProject `
  ## Terraform

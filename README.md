@@ -17,7 +17,7 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
 6. Update and Upgrade the system
 
  * _Ubuntu_
-   * sudo apt-get update
+   * `<sudo apt-get update>`
    * sudo apt-get upgrade
   
  * _CentOS_

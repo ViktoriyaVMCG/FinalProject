@@ -26,6 +26,6 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  ### Create an ssh key
  `ssh-keygen`
  After creating it, two keys should appear in the `~/.ssh` directory
-  * *private_key*
+  * *private_key*  - do not share this key with anyone
   * *public_key.pub*
  ## Installing Terraform

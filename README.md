@@ -1,5 +1,5 @@
 # Final Project
-This project is intended to automate the provisioning, configuring and deploying of simple HTML web application on the two instances (machines) dev and prod using AWS, Terraform, Ansible and Jenkins.
+This project is intended to automate the provisioning, configuring and deploying of simple HTML web application on the two instances (machines) dev and prod using _AWS, Terraform, Ansible and Jenkins._
 
 In this project four ec2 instances prod, dev, jump and jenkins will be created using terreform and AWS.
 

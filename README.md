@@ -14,7 +14,7 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
 3. Choose: _Run Linux on Windows_ and choose your system. 
 4. Install
 5. Create username and password 
-6.Update and Upgrade the system
+6. Update and Upgrade the system
 
  * _Ubuntu_
    * sudo apt-get update

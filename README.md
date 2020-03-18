@@ -29,5 +29,5 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
   * *private_key*  - do not share this key with anyone
   * *public_key.pub*
  ### Create an AWS account
- https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ - automatic!
+ https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
  ## Terraform

@@ -37,3 +37,5 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  ### Create in your local machine a folder where you will keep the files.
  `mkdir FinalProject `
  ## Terraform
+1. Go to the https://www.terraform.io/downloads.html
+2. 

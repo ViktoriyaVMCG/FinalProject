@@ -28,4 +28,6 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  After creating it, two keys should appear in the `~/.ssh` directory
   * *private_key*  - do not share this key with anyone
   * *public_key.pub*
- ## Installing Terraform
+ ### Create an AWS account
+ https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ - automatic!
+ ## Terraform

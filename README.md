@@ -12,9 +12,9 @@ In this project four ec2 instances prod, dev, jump and jenkins will be created u
 Before installing anything update and upgrade your local machine to the last version.
  
  * _UBUNTU_
- * sudo apt-get update
- * sudo apt-get upgrade
+   * sudo apt-get update
+   * sudo apt-get upgrade
   
-  * _CentOS_
- * sudo yum update
- * sudo yum upgrade
+ * _CentOS_
+   * sudo yum update
+   * sudo yum upgrade

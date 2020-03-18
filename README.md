@@ -23,5 +23,6 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  * _CentOS_
    * sudo yum update
    * sudo yum upgrade
+ #### Create an ssh key
  
  ## Installing Terraform

@@ -30,4 +30,6 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
   * *public_key.pub*
  ### Create an AWS account
  https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
+ ### Create an API key 
+ We need to create an API key with in AWS to use in the Terraform. 
  ## Terraform

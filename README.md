@@ -39,4 +39,8 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  ## Terraform
 1. Go to the https://www.terraform.io/downloads.html
 2. Choose the package and right click on it, then from popup menu choose copy link address
-3. In terminal type the following command `wget place the copied link over here`
+3. In terminal type the following command `wget _place_the_copied_link_over_here_`
+4. The zip file will be installed to the local machine.
+5. Use the following command to unzip file 
+  `unzip _the_name_of_the_file_that_was_just_installed.zip_`
+6.

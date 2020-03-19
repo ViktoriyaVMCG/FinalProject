@@ -38,4 +38,5 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
  `mkdir FinalProject `
  ## Terraform
 1. Go to the https://www.terraform.io/downloads.html
-2. 
+2. Choose the package and right click on it, then from popup menu choose copy link address
+3. In terminal type the following command `wget place the copied link over here`

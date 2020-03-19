@@ -54,4 +54,6 @@ The Project includes the followind files in terraform:
 * outputs.tf
   * The file consist of the code that gives the output at the end of running main.tf file with IP addresses of the private and public addresses of the created instances
 * main.tf
-  * 
+  * The file consist of the code that build following:
+    1.F
+    2.F

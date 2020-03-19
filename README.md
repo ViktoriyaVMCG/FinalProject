@@ -43,4 +43,15 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
 4. The zip file will be installed to the local machine.
 5. Use the following command to unzip file 
   `unzip _the_name_of_the_file_that_was_just_installed.zip_`
-6.
+6. Verifying the Installation `terraform --version`
+
+## Terraform files
+The Project includes the followind files in terraform:
+* terraform.tfvars
+  * The file includes important variables that are called inside of the code that in the main.tf
+* variables.tf
+  * The file consist of the code of the variables with their explanations.
+* outputs.tf
+  * The file consist of the code that gives the output at the end of running main.tf file with IP addresses of the private and public addresses of the created instances
+* main.tf
+  * 

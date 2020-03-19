@@ -55,5 +55,11 @@ The Project includes the followind files in terraform:
   * The file consist of the code that gives the output at the end of running main.tf file with IP addresses of the private and public addresses of the created instances
 * main.tf
   * The file consist of the code that build following:
-    1.F
-    2.F
+  * _AWS Key Pair_ - that generates a public and private keys
+  * _AWS Elastic IP_ - the elastic IP was applyed to the jump machine so that have the same public IP everytime when the instance gets started.
+  * _Employee Security Group_ - that create security group that allows only to the local machine directly connect to the jump instance and nothing else.
+  * _Customer Security Group_ - that create security group that allows only dev and prod instance to connect to the browser.
+  * _Instances_ - there are 4 instances that will be created by the code jump, dev, prod and jenkins.
+  * _Call Ansible_ - that part of the code calls the playbook that has listed commands for each instanc and executes those commands.
+## How to run Terraform files
+`terraform apply` - this command run terrafor and updated after changes have been made to the files.

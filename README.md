@@ -71,3 +71,4 @@ To configure the PPA on your machine and install Ansible run these commands:
 * `sudo apt install ansible`
 
 When successful, check your installed Ansible version:
+* `ansible --version`

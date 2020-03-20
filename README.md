@@ -70,3 +70,7 @@ The Project includes the followind files in terraform:
 
 2. When successful, check your installed Ansible version:
 * `ansible --version`
+## Ansible files
+The Project includes the followind files in ansible:
+* playbook.yml
+  * The file consist of the code that connecting to the roles files that are has special command for the following httpd, java, jenkins, and jump

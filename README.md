@@ -65,8 +65,8 @@ The Project includes the followind files in terraform:
 * `terraform apply` - Run this command in the folder where the terraform files are placed. Run it also if the changes in the file were made to update. The command build everything that was written in the code.
 * `terraform destroy` - The following command destroys everything that was build.
 ## Ansible
-Install Ansible from Ubuntu Repository
+1. Install Ansible from Ubuntu Repository
 * `sudo apt install ansible`
 
-When successful, check your installed Ansible version:
+2. When successful, check your installed Ansible version:
 * `ansible --version`

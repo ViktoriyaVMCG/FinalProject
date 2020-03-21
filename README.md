@@ -90,4 +90,9 @@ The Project includes the followind files in ansible:
 
 In the main.tf file ansible command to run playbook is already written inside the code so when you run terraform it will authomatically call ansible.
 
+## Jenkins
+The main purpose of the Jenkis in this project is to deploy the code on the github automatically via the dev branch and head commits.
 
+The link on the html that I used for this project:
+
+https://github.com/ViktoriyaVMCG/DevOpsProject

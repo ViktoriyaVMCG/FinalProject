@@ -64,6 +64,7 @@ The Project includes the followind files in terraform:
 ## How to run Terraform files
 * `terraform apply` - Run this command in the folder where the terraform files are placed. Run it also if the changes in the file were made to update. The command build everything that was written in the code.
 * `terraform destroy` - The following command destroys everything that was build.
+
 ## Ansible
 1. Install Ansible from Ubuntu Repository
 * `sudo apt install ansible`
@@ -84,4 +85,9 @@ The Project includes the followind files in ansible:
   * The file onsists of the code that Install Updates, and Install Epel-Releas.
 ## How to run Ansible files
 `ansible-playbook -i inventory main.yml` - Run this command to run ansible playbook or other ansible file.
+
 `ansible-palybook -i inventory --private-key /path/to/the/main.yml --syntax-check` - Run this command to check ansible syntax before run ansible file.
+
+In the main.tf file ansible command to run playbook is already written inside the code so when you run terraform it will authomatically call ansible.
+
+

@@ -96,3 +96,18 @@ The main purpose of the Jenkis in this project is to deploy the code on the gith
 The link on the html that I used for this project:
 
 https://github.com/ViktoriyaVMCG/DevOpsProject
+## Jenkins Configuration
+After Jenkins was install do the following:
+1. Install telnet in the Jenkins machine and configure it. 
+  * `sudo yum telnet`
+  * `telnet localhost 8080`
+2. Install ngix 
+  * `sudo yum ngix`
+3. Configure ngix
+4. Install elinks
+  * `sudo yum elinks`
+5. Do the Configuration of the jenkins in GUI.  
+6. Do the Configuration in the jenkins terminal.
+
+## How Jenkins deploys code automatically to from the github
+

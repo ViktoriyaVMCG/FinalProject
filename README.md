@@ -82,3 +82,6 @@ The Project includes the followind files in ansible:
   * The file consists of the code that Install Updates, Install wget and git, Download Jenkins repo, Import Jenkins Key, Install Jenkins, Start & Enable Jenkins, Sleep for 30 seconds and continue with play, Get init password Jenkins, and Print init password Jenkins.
 * jump main.yml
   * The file onsists of the code that Install Updates, and Install Epel-Releas.
+## How to run Ansible files
+`ansible-playbook -i inventory main.yml` - Run this command to run ansible playbook or other ansible file.
+`ansible-palybook -i inventory --private-key /path/to/the/main.yml --syntax-check` - Run this command to check ansible syntax before run ansible file.

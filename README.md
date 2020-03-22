@@ -17,12 +17,16 @@ In this project four ec2 instances __prod, dev, jump and jenkins__ will be creat
 6. Update and Upgrade the system
 
  * _Ubuntu_
-   * `sudo apt-get update`
-   * `sudo apt-get upgrade`
+   ```
+   sudo apt-get update
+   sudo apt-get upgrade
+   ```
   
  * _CentOS_
-   * `sudo yum update`
-   * `sudo yum upgrade`
+   ```
+   sudo yum update
+   sudo yum upgrade
+   ```
  ## Preparation
  
  ### Create an ssh key
@@ -99,23 +103,27 @@ https://github.com/ViktoriyaVMCG/DevOpsProject
 ## Jenkins Configuration
 After Jenkins was install do the following:
 1. Install telnet in the Jenkins machine and configure it. 
-  * `sudo yum telnet`
-  * `telnet localhost 8080`
+  ```
+  sudo yum telnet
+  telnet localhost 8080
+  ```
 2. Install ngix 
-  * `sudo yum ngix`
+  `sudo yum ngix`
 3. Configure ngix
 4. Install elinks
-  * `sudo yum elinks`
+  `sudo yum elinks`
 5. Go to: http://your_ip_address:8080 and run the following commands to get admin password.
-  * `sudo nano /var/lib/jenkins/secrets/initialAdminPassword`
+  `sudo nano /var/lib/jenkins/secrets/initialAdminPassword`
 6. Copy the password and paste into browser to unlock the Jenkins.
 7. Go to the Jenkins machine by open the terminal and ssh into it.
 8. Go as a root
-  * `sudo su` and then go to the jenkins `su - jenkins`
+  `sudo su` and then go to the jenkins `su - jenkins`
 9. Create ansible folder and inside it two more folder one dev another prod
-  * `mkdir ansible`
-  * `mkdir dev`
-  * `mkdir prod`
+  ```
+  mkdir ansible
+  mkdir dev
+  mkdir prod
+  ```
 10. Then create inside dev and prod folders playbook that will download git and clode, update repository from github.
 
 The playbook.yml should look the following way:

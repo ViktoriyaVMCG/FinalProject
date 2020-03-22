@@ -120,10 +120,29 @@ After Jenkins was install do the following:
 
 The playbook.yml should look the following way:
 
-* `---
-   `-`
-
-
+```
+   ---
+   -
+      become: true
+      hosts: all
+      name: "Install Git"
+      tasks:
+      
+      - name: install git
+        become: true
+        register: ymrepo
+        yum:
+          name: git
+          state: latest
+          
+      - name: Clone the git repo
+        git:
+           repo: 'https://github.com/path/to/your/project.git'
+           dest: '/var/www/html/'
+           version: master
+           clone: yes
+           update: yes
+```
 
 
 ## How Jenkins deploys code automatically to from the github

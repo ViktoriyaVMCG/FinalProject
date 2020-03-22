@@ -127,6 +127,7 @@ After Jenkins was install do the following:
   ```
 10. Then create inside dev and prod folders playbook that will download git and clode, update repository from github.
 
+The following exaple of playbook for prod instance. For dev instance everything will be the same except for only one line where you should replcae the `version: master` to `version: dev`
 The playbook.yml should look the following way:
 
 ```

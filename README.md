@@ -113,6 +113,12 @@ After Jenkins was install do the following:
 ## How Jenkins deploys code automatically to from the github
 To be able to do it we need to do the following:
 1. Install GitHub Jenkins plugin. 
+  * Go to Manage Jenkins -> Manage Plugin.
+2. Search Github Plugin in the Available tab then click on Download now and install after the restart.
+3. Creating a Jenkins job
+  * To Create a new task for Jenkins, click on “New Item” then enter an item name that is suitable for your project and select Freestyle project. Now click Ok. 
+4. 
+
 
 
 

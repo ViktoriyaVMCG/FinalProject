@@ -118,6 +118,14 @@ After Jenkins was install do the following:
   * `mkdir prod`
 10. Then create inside dev and prod folders playbook that will download git and clode, update repository from github.
 
+The playbook.yml should look the following way:
+
+* `---
+   `-`
+
+
+
+
 ## How Jenkins deploys code automatically to from the github
 To be able to do it we need to do the following:
 1. Install GitHub Jenkins plugin. 

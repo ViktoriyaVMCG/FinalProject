@@ -109,6 +109,14 @@ After Jenkins was install do the following:
 5. Go to: http://your_ip_address:8080 and run the following commands to get admin password.
   * `sudo nano /var/lib/jenkins/secrets/initialAdminPassword`
 6. Copy the password and paste into browser to unlock the Jenkins.
+7. Go to the Jenkins machine by open the terminal and ssh into it.
+8. Go as a root
+  * `sudo su` and then go to the jenkins `su - jenkins`
+9. Create ansible folder and inside it two more folder one dev another prod
+  * `mkdir ansible`
+  * `mkdir dev`
+  * `mkdir prod`
+10. Then create inside dev and prod folders playbook that will download git and clode, update repository from github.
 
 ## How Jenkins deploys code automatically to from the github
 To be able to do it we need to do the following:
@@ -117,7 +125,12 @@ To be able to do it we need to do the following:
 2. Search Github Plugin in the Available tab then click on Download now and install after the restart.
 3. Creating a Jenkins job
   * To Create a new task for Jenkins, click on “New Item” then enter an item name that is suitable for your project and select Freestyle project. Now click Ok. 
-4. 
+4. Select the GitHub project checkbox and set the Project URL to point to your GitHub Repository.
+5. Under Source Code Management tab, select Git and then set the Repository URL to point to your GitHub Repository.
+6. Now Under Build Triggers tab, select the “Build when a change is pushed to GitHub” checkbox.
+
+
+
 
 
 

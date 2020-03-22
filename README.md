@@ -106,8 +106,13 @@ After Jenkins was install do the following:
 3. Configure ngix
 4. Install elinks
   * `sudo yum elinks`
-5. Do the Configuration of the jenkins in GUI.  
-6. Do the Configuration in the jenkins terminal.
+5. Go to: http://your_ip_address:8080 and run the following commands to get admin password.
+  * `sudo nano /var/lib/jenkins/secrets/initialAdminPassword`
+6. Copy the password and paste into browser to unlock the Jenkins.
 
 ## How Jenkins deploys code automatically to from the github
+To be able to do it we need to do the following:
+1. Install GitHub Jenkins plugin. 
+
+
 

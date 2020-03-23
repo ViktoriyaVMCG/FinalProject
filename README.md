@@ -172,10 +172,14 @@ To be able to do it we need to do the following:
 5. Under Source Code Management tab, select Git and then set the Repository URL to point to your GitHub Repository. In Credentials put thr ssh-key for git hub. In Branches to build put following `*/dev`if it is dev branch or `*/master` if it is master branch. 
 6. Now Under Build Triggers tab, select the “GitHub hook trigger for GITScm polling” checkbox.
 7. In Build choose Invoke Ansible Playbook and write the following:
-   * ansible 2.9.3
-   * /var/lib/jenkins/ansible/dev/main.yml
-   * chrckbox the following File or host list
-   *
+  1. 
+     * ansible 2.9.3
+     * /var/lib/jenkins/ansible/dev/main.yml
+     * Chrckbox the following: File or host list and write the following
+     * /var/lib/jenkins/ansible/dev/inventory
+  
+  2. 
+     *
 
 
 

@@ -173,9 +173,13 @@ To be able to do it we need to do the following:
 6. Now Under Build Triggers tab, select the “GitHub hook trigger for GITScm polling” checkbox.
 7. In Build choose Invoke Ansible Playbook and write the following: 
      * ansible 2.9.3
-     * /var/lib/jenkins/ansible/dev/main.yml
+     ```
+      /var/lib/jenkins/ansible/dev/main.yml
+     ```
      * Chrckbox the following: File or host list and write the following
-     * /var/lib/jenkins/ansible/dev/inventory
+     ``` 
+      /var/lib/jenkins/ansible/dev/inventory
+     ```
   
 8. Also, in the build choose execute shell and write the following code
      ```
@@ -207,7 +211,7 @@ To be able to do it we need to do the following:
      ```
      sudo systemctl restart httpd
      ```
-     
+## GitHub connection with Jenkins    
      
 
 

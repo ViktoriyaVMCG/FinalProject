@@ -171,18 +171,44 @@ To be able to do it we need to do the following:
 4. Select the GitHub project checkbox and set the Project URL to point to your GitHub Repository.
 5. Under Source Code Management tab, select Git and then set the Repository URL to point to your GitHub Repository. In Credentials put thr ssh-key for git hub. In Branches to build put following `*/dev`if it is dev branch or `*/master` if it is master branch. 
 6. Now Under Build Triggers tab, select the “GitHub hook trigger for GITScm polling” checkbox.
-7. In Build choose Invoke Ansible Playbook and write the following:
-  1. 
+7. In Build choose Invoke Ansible Playbook and write the following: 
      * ansible 2.9.3
      * /var/lib/jenkins/ansible/dev/main.yml
      * Chrckbox the following: File or host list and write the following
      * /var/lib/jenkins/ansible/dev/inventory
   
-  2. 
-     *
-
-
-
+8. Also, in the build choose execute shell and write the following code
+     ```
+     echo "--------------------Build Started--------------------"
+     ls -la
+     cd sampleHTML-master
+     cat index.html
+     echo "Build by Jenkins Build# $BUILD ID" >> index.html
+     echo "--------------------Build Started--------------------"
+     ```
+9. Once again in the build choose execute shell and write the following code
+     ```
+     echo "--------------------Test Started--------------------"
+     cd sampleHTML-master
+     result = `grep "Academy" index.html | wc -l`
+     echo $result
+     if [ "$result" = "2" ]
+     then
+         echo "Test Passed"
+     else
+         echo "Test Fail"
+         exit
+     fi
+     echo "--------------------Test "
+     ```
+10. In the Post-build Actions chouse send build artifacts over SSH
+    * In the name write the name of instance dev or prod
+    * In the Transfers part choose the Exec command
+     ```
+     sudo systemctl restart httpd
+     ```
+     
+     
 
 
 

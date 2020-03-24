@@ -212,8 +212,16 @@ To be able to do it we need to do the following:
      sudo systemctl restart httpd
      ```
 ## GitHub connection with Jenkins    
-     
+1. In the github project go the settings.
+2. Go the Webhooks.
+3. Now set the Jenkins hook URL as the URL for your machine. 
+4. Also, check the box let me select individual evens
+5. There choose the following:
+   * Pull requests
+   * Pushes
+6. Check the box Active
+7. In the github account go to the settings.
+8. Choose SSH and GPC keys.
+9. Click on New SSH Key and inser jenkins public key. 
 
-
-
-
+## Explanation of how Jenkins deploys code automatically to from the github

@@ -226,7 +226,8 @@ To be able to do it we need to do the following:
 
 ## Explanation of how Jenkins deploys code automatically to from the github
 Jenkins updated websites every time as some changes happened on the GitHub project.
-1.First Jenkins gets triggering an Ansible playbook.
+1. First Jenkins gets triggering an Ansible playbook.
    * It downloads a new updates from the github to the Jenkins instance.
-2.After downloading a lates version of code, Jenkins pushing in to the website.
-3.Jenkins restarts http
+2. After downloading a lates version of code, Jenkins pushing in to the website.
+3. Jenkins restarts http
+4. Webside updated to the latest version

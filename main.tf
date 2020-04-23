@@ -5,9 +5,9 @@ provider "aws" {
 }
 
 #-----Default VPC
-data "http" "myip" {
-   url = "http://ipv4.icanhazip.com"
-}
+#data "http" "myip" {
+#   url = "http://ipv4.icanhazip.com"
+#}
 
 data "aws_vpc" "default"{}
 
@@ -54,7 +54,7 @@ resource "aws_security_group" "jump_sg" {
     from_port	= 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${chomp(data.http.myip.body)}/32", data.aws_vpc.default.cidr_block]
+    cidr_blocks = ["73.43.106.61/32","50.251.142.249/32",data.aws_vpc.default.cidr_block]
   }
 
   egress {
@@ -122,15 +122,29 @@ resource "aws_security_group" "customer_sg" {
   	from_port = 0
   	to_port = 0
   	protocol	= "-1"
-  	cidr_blocks = ["${chomp(data.http.myip.body)}/32"]
+  	cidr_blocks = ["73.43.106.61/32"]
   }
 
   egress {
   	from_port = 0
   	to_port = 0
   	protocol	= "-1"
-  	cidr_blocks = ["${chomp(data.http.myip.body)}/32"]
+  	cidr_blocks = ["73.43.106.61/32"]
   }
+   
+   ingress{
+     from_port = 0
+     to_port = 0
+     protocol = "-1"
+     cidr_blocks = ["50.251.142.249/32"]
+   }
+   
+   engress {
+      from_port = 0
+      to_port = 0
+      protocol = "-1"
+      cidr_blocks = ["50.251.142.249/32"]
+   }
 }
 
 

@@ -43,6 +43,11 @@ resource "aws_eip" "jump"{
    vpc = true
 }
 
+resource "aws_eip" "jenkins"{
+   instance = aws_instance.jenkins.id
+   vpc = true
+}
+
 # SECURITY GROUPS
 
 resource "aws_security_group" "jump_sg" {

@@ -198,6 +198,10 @@ To be able to do it we need to do the following:
      cd sampleHTML-master
      cat index.html
      echo "Build by Jenkins Build# $BUILD ID" >> index.html
+     cat index.html
+     cat dog_info.html
+     echo "Build by Jenkins Build# $BUILD_ID" >> dog_info.html
+     cat dog_info.html
      echo "--------------------Build Started--------------------"
      ```
 9. Once again in the build choose execute shell and write the following code

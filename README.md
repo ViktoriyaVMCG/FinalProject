@@ -144,6 +144,16 @@ The playbook.yml should look the following way:
         yum:
           name: git
           state: latest
+      
+      - name: install httpd
+        yum:
+          name: httpd
+          state: latest
+      
+      - name: ensure apache is running
+        service: 
+          name: httpd
+          state: started
           
       - name: Clone the git repo
         git:
